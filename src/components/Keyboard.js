@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './Keyboard.css'
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
@@ -9,7 +10,6 @@ export const Keyboard = (props) => {
     })
 
     useEffect(() => {
-        // console.log(`KBD ${props.guessed}`)
         setWordState({ guessed: props.guessed })
     }, [props])
 
@@ -19,8 +19,8 @@ export const Keyboard = (props) => {
         return wordState.guessed.indexOf(ch) >= 0
     }
 
-    return(<div>
-        {alphabet.split('').map(ch => !isGuessed(ch) ? <button key={ch} onClick={() => hook(ch)}>{ch}</button> :'')}
+    return(<div className="hangman-keyboard">
+        {alphabet.split('').map(ch => !isGuessed(ch) ? <button className="hangman-key" key={ch} onClick={() => hook(ch)}>{ch}</button> :'')}
     </div>)
 }
 

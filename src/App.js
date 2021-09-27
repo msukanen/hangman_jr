@@ -8,11 +8,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div style={{display: 'flex'}}>
-          <div><h1>Hangman Jr</h1>
-          <p>by <em>Markku &quot;Marsupilami&quot; Sukanen</em></p>
+          <div className="mainTitle">
+            <h1>Hangman <sub>JS</sub>\<sup>R</sup></h1>
+            <p style={{fontSize: '14pt'}}>2021 by <em>Markku &quot;Marsupilami&quot; Sukanen</em></p>
           </div>
-          <div>
-            <div><a href="https://github.com/msukanen/hangman_jr" target="msukanen-github"><GitHubLogo /></a></div>
+          <div className="contactInfo">
+            <div><GitHubLogo href="https://github.com/msukanen/hangman_jr" /></div>
             <div><PayPalLinkForm /></div>
           </div>
         </div>

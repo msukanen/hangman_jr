@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import './Doodle.css'
 
+const fileFormat = '.svg'
+
 export const ShowDrawing = (props) => {
     const [drawingState, setDrawingState] = useState({
         index: props.stage
@@ -12,9 +14,9 @@ export const ShowDrawing = (props) => {
     }, [props])
 
     return(<div>
-        { index === undefined && <>Näpytäppä kirjaimia&hellip;</>}
-        { index >= 0 && index < 10 && <img src={`gfx/hangman_${index}.png`} alt="Just hanging here..." /> }
-        { index >= 10 && <img src="gfx/hangman_10.png" className="rotate linear infinite spinner" alt="...dead!" /> }
+        { index === undefined && <><br />{props.alt}</>}
+        { index >= 0 && index < 10 && <img src={`gfx/hangman_${index}${fileFormat}`} className="hanged-man" alt="Just hanging here..." /> }
+        { index >= 10 && <img src={`gfx/hangman_10${fileFormat}`} className="rotate hanged-man linear infinite spinner" alt="...dead!" /> }
     </div>)
 }
 

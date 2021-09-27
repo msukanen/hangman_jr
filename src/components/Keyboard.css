@@ -1,0 +1,6 @@
+.hangman-key {
+    font-weight: bold;
+    font-size: 18pt;
+    font-family: monospace;
+    box-shadow: 2pt 2pt slategray;
+}

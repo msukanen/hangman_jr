@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="hangman_10.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.5554293"
+     inkscape:cx="148.83351"
+     inkscape:cy="853.46213"
+     inkscape:window-width="1920"
+     inkscape:window-height="1177"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;stroke-width:0.0735051"
+       id="rect55"
+       width="3.912369"
+       height="43.886597"
+       x="250.18457"
+       y="93.097527"
+       transform="rotate(45)" />
+    <rect
+       style="fill:#000000;stroke-width:0.0736002"
+       id="rect57"
+       width="4.4226775"
+       height="45.927837"
+       x="111.07732"
+       y="242.73711" />
+    <rect
+       style="fill:#000000;stroke-width:0.0709627"
+       id="rect59"
+       width="3.7932429"
+       height="46.948456"
+       x="-71.343521"
+       y="260.18936"
+       transform="rotate(-40)" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect170"
+       width="4.2525773"
+       height="89.81443"
+       x="131.81056"
+       y="142.31796"
+       transform="rotate(5)" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect282"
+       width="62.938145"
+       height="4.0824742"
+       x="95.771141"
+       y="116.52872"
+       transform="rotate(15)" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect395"
+       width="3.5721648"
+       height="33.340206"
+       x="58.775803"
+       y="137.34549" />
+    <ellipse
+       style="fill:#000000;stroke-width:0.264583"
+       id="path509"
+       cx="50.435566"
+       cy="178.183"
+       rx="15.734536"
+       ry="16.244846" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect624"
+       width="4.0824742"
+       height="39.974228"
+       x="15.150352"
+       y="199.39412"
+       transform="rotate(-12)" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect740"
+       width="2.5515463"
+       height="29.427834"
+       x="175.47745"
+       y="95.89167"
+       transform="rotate(45)" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect857"
+       width="24.835051"
+       height="2.8917525"
+       x="60.268909"
+       y="191.03815" />
+    <rect
+       style="fill:#000000;stroke-width:0.264583"
+       id="rect975"
+       width="36.912369"
+       height="3.2319589"
+       x="168.03572"
+       y="-171.55496"
+       transform="rotate(119)" />
+    <rect
+       style="fill:#000000;stroke-width:0.295317"
+       id="rect1254"
+       width="37.932991"
+       height="3.4020619"
+       x="-276.92923"
+       y="20.005388"
+       transform="rotate(-101)" />
+  </g>
+</svg>

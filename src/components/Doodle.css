@@ -23,3 +23,7 @@
 .infinite {
     animation-iteration-count: infinite;
 }
+
+.hanged-man {
+    width: 280px;
+}

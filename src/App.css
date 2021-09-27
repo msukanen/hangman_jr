@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #383c44;
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -15,4 +15,9 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.contactInfo {
+  padding-left: 16pt;
+  padding-top: 16pt;
 }

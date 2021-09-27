@@ -79,9 +79,9 @@ export const Main = (props) => {
     }, [wrongGuesses, guessed, word, gameOver, gameSuccess])
 
     return(<div id="gameboard">
-        {!gameOver && <ShowWord word={word} guessed={guessed}/>}
+        <ShowWord word={word} guessed={guessed} gameOver={gameOver}/>
         {!gameOver && <Keyboard word={word} onClick={guessChar} guessed={guessed}/>}
-        <ShowDrawing stage={wrongGuesses} />
+        <ShowDrawing stage={wrongGuesses} alt={<>It's time to start hanging around&hellip;</>} />
         { gameOver && <GameOver onClick={restart} success={gameSuccess}/>}
     </div>)
 }
