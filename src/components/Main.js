@@ -1,39 +1,88 @@
+import { useState, useEffect } from 'react'
 import ShowDrawing from './Doodle'
 import ShowWord from './WordBoard'
 import Keyboard from './Keyboard'
-import { useState, useEffect } from 'react'
+import GameOver, {gameOverFail, gameOverSucc} from './GameOver'
 
 export const Main = (props) => {
     const words = props.words
     const randomWord = (words) => words[Math.floor(Math.random() * words.length)]
-    const [guesser, setGuess] = useState({
-        stage: undefined,
+    const [guesser, setGuessState] = useState({
+        wrongGuesses: undefined,
         word: randomWord(words),
         guessed: undefined,
-        wrongGuesses: undefined
+        gameOver: undefined,
+        gameSuccess: undefined,
     })
-    const { word, stage, guessed } = guesser
+    const {
+        wrongGuesses,
+        word,
+        guessed,
+        gameOver,
+        gameSuccess
+    } = guesser
 
     const guessChar = (ch) => {
-        let g
+        let newGuesses
         if (guessed) {
             guessed.push(ch)
-            g = guessed
+            newGuesses = guessed
         }
-        else g = [ch]
-        console.log(`guessChar ${ch}`)
+        else newGuesses = [ch]
 
-        setGuess({ stage: stage !== undefined ? stage+1 : 0, word: word, guessed: g })
+        let wrongs = wrongGuesses
+        if (word.indexOf(ch) < 0) {
+            if (wrongs === undefined)
+                 wrongs = 1
+            else wrongs++
+        }
+
+        let correct = 0
+        word.split('').forEach(wch => newGuesses.forEach(gch => gch === wch && correct++))
+        let allCorrect = correct === word.length
+        
+        let itsGameOverMan = undefined
+        if (wrongs >= 10 || allCorrect)
+            itsGameOverMan = true
+        let endingType = allCorrect ? gameOverSucc : gameOverFail
+
+        setGuessState({
+            wrongGuesses: wrongs,
+            word: word,
+            guessed: newGuesses,
+            gameOver: itsGameOverMan,
+            gameSuccess: endingType
+        })
+    }
+
+    /**
+     * Reset the playfield.
+     */
+    const restart = () => {
+        setGuessState({
+            wrongGuesses: undefined,
+            word: randomWord(words),
+            guessed: undefined,
+            gameOver: undefined,
+            gameSuccess: undefined
+        })
     }
 
     useEffect(() => {
-        setGuess({ stage: stage, word: word, guessed: guessed })
-    }, [words, stage, guessed, word])
+        setGuessState({
+            wrongGuesses: wrongGuesses,
+            word: word,
+            guessed: guessed,
+            gameOver: gameOver,
+            gameSuccess: gameSuccess
+        })
+    }, [wrongGuesses, guessed, word, gameOver, gameSuccess])
 
     return(<div id="gameboard">
-        <ShowWord word={word} guessed={guessed}/>
-        <Keyboard word={word} onClick={guessChar} guessed={guessed}/>
-        <ShowDrawing stage={stage} />
+        {!gameOver && <ShowWord word={word} guessed={guessed}/>}
+        {!gameOver && <Keyboard word={word} onClick={guessChar} guessed={guessed}/>}
+        <ShowDrawing stage={wrongGuesses} />
+        { gameOver && <GameOver onClick={restart} success={gameSuccess}/>}
     </div>)
 }
 

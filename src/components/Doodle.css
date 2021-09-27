@@ -1,3 +1,7 @@
+.spinner {
+    z-index: -1;
+}
+
 .rotate {
     animation: rotation 2s;
 }
