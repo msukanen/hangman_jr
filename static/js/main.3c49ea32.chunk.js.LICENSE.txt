@@ -1,0 +1,1 @@
+//! ESLint complains about array-callback-return, so disable it as we do NOT use the return value for anything
