@@ -16,8 +16,13 @@ export const PayPalLinkForm = () => {
     </form>)
 }
 
+/**
+ * Generate link to project page.
+ * @param {*} props project = "blabla"
+ * @returns 
+ */
 export const GitHubLogo = (props) => {
-    return <a href={`${props.href}`} target="msukanen-github">
+    return <a href={`https://github.com/msukanen/${props.project}`} target="msukanen-github">
              <img src="gfx/github.svg"
                   alt="Source code @github"
                   style={{height: 'calc(10px + 2vmin)'}} />

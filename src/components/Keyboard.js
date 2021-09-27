@@ -13,14 +13,21 @@ export const Keyboard = (props) => {
         setWordState({ guessed: props.guessed })
     }, [props])
 
-    const isGuessed = (ch) => {
-        if (wordState.guessed === undefined)
-            return false
-        return wordState.guessed.indexOf(ch) >= 0
-    }
-
     return(<div className="hangman-keyboard">
-        {alphabet.split('').map(ch => !isGuessed(ch) ? <button className="hangman-key" key={ch} onClick={() => hook(ch)}>{ch}</button> :'')}
+        {alphabet.split('').map(ch => {
+            /**
+            * Check if given character is already guessimated.
+            * @param {*} ch a character.
+            * @returns boolean
+            */
+            const isGuessed = (ch) => {
+                if (wordState.guessed === undefined)
+                    return false
+                return wordState.guessed.indexOf(ch) >= 0
+            }
+            
+            return !isGuessed(ch) && <button className="hangman-key" key={ch} onClick={() => hook(ch)}>{ch}</button>
+        })}
     </div>)
 }
 

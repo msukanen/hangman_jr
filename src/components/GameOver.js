@@ -1,6 +1,11 @@
 export const gameOverFail = 1
 export const gameOverSucc = 2
 
+/**
+ * GameOver tag.
+ * @param {*} props success type.
+ * @returns blob
+ */
 export const GameOver = (props) => {
     return(<div className="hangman-gameover">
         {props.success === gameOverFail ? <h1>It's Game Over, man! Game Over!</h1>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './WordBoard.css'
 
 export const ShowWord = (props) => {
     const [wordState, setWordState] = useState({
@@ -10,15 +11,18 @@ export const ShowWord = (props) => {
     const { word, show } = wordState
 
     useEffect(() => {
+        // construct an array to show unguessed (marked with '-') and guessed characters.
         let chs = new Array(props.word.length).fill('-')
+        
+        //! ESLint complains about array-callback-return, so disable it as we do NOT use the return value for anything
+        // eslint-disable-next-line
         props.word.split('').map((ch, index) => {
             if (props.guessed && props.guessed.indexOf(ch) >= 0)
                 chs[index] = ch
-            return null
         })
         chs = chs.join('')
         
-        if (props.gameOver)
+        if (props.gameOver) // game over? Show the correct word now.
             chs = props.word
 
         setWordState({
@@ -30,7 +34,7 @@ export const ShowWord = (props) => {
     }, [props])
 
     return(<div className="hangman-word">
-        {word && <code style={{fontSize:'3vh'}}>{show.toUpperCase()}</code>}
+        {word && <code>{show.toUpperCase()}</code>}
     </div>)
 }
 

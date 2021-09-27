@@ -22,6 +22,10 @@ export const Main = (props) => {
         gameSuccess
     } = guesser
 
+    /**
+     * Lets see how bad a guesser the user is...
+     * @param {*} ch a character.
+     */
     const guessChar = (ch) => {
         let newGuesses
         if (guessed) {
@@ -37,10 +41,12 @@ export const Main = (props) => {
             else wrongs++
         }
 
+        // count correct chars
         let correct = 0
         word.split('').forEach(wch => newGuesses.forEach(gch => gch === wch && correct++))
         let allCorrect = correct === word.length
         
+        // game over? Maybe. But what sort?
         let itsGameOverMan = undefined
         if (wrongs >= 10 || allCorrect)
             itsGameOverMan = true
@@ -78,6 +84,7 @@ export const Main = (props) => {
         })
     }, [wrongGuesses, guessed, word, gameOver, gameSuccess])
 
+    // blob
     return(<div id="gameboard">
         <ShowWord word={word} guessed={guessed} gameOver={gameOver}/>
         {!gameOver && <Keyboard word={word} onClick={guessChar} guessed={guessed}/>}
