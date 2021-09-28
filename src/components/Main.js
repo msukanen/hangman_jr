@@ -87,8 +87,8 @@ export const Main = (props) => {
     // blob
     return(<div id="gameboard">
         <ShowWord word={word} guessed={guessed} gameOver={gameOver}/>
+        <ShowDrawing stage={wrongGuesses} alt={<>It's time to start hanging around&hellip;</>}/>
         {!gameOver && <Keyboard word={word} onClick={guessChar} guessed={guessed}/>}
-        <ShowDrawing stage={wrongGuesses} alt={<>It's time to start hanging around&hellip;</>} />
         { gameOver && <GameOver onClick={restart} success={gameSuccess}/>}
     </div>)
 }
