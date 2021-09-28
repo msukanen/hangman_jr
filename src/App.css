@@ -16,7 +16,12 @@
   color: #61dafb;
 }
 
-.contactInfo {
-  padding-left: 16pt;
-  padding-top: 16pt;
+.contact-info {
+  position: absolute;
+  top: 16pt;
+  right: 16pt;
+}
+
+.basic-font {
+  font-size: 14pt;
 }

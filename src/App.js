@@ -1,17 +1,17 @@
 import './App.css'
 import Main from './components/Main'
 import { PayPalLinkForm, GitHubLogo } from './components/Links'
-import { wordList } from './components/Words'
+import { wordList } from './words'
 
-function App() {
+export default function App () {
 	return (<div className="App">
 		<header className="App-header">
 			<div style={{display: 'flex'}}>
-				<div className="mainTitle">
+				<div className="main-title">
 					<h1>Hangman <sub>JS</sub>\<sup>R</sup></h1>
-					<p style={{fontSize: '14pt'}}>2021 by <em>Markku &quot;Marsupilami&quot; Sukanen</em></p>
+					<p className="basic-font">2021 by <em>Markku &quot;Marsupilami&quot; Sukanen</em></p>
 				</div>
-				<div className="contactInfo">
+				<div className="contact-info">
 					<div><GitHubLogo project="hangman_jr" /></div>
 					<div><PayPalLinkForm /></div>
 				</div>
@@ -20,5 +20,3 @@ function App() {
 		<Main words={wordList}/>
 	</div>)
 }
-
-export default App
