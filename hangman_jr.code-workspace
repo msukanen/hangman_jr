@@ -1,0 +1,26 @@
+{
+    "folders": [{
+        "path": "."
+    }],
+    "settings": {
+        "code-runner.clearPreviousOutput": true,
+        "code-runner.enableAppInsights": false,
+        "code-runner.saveAllFilesBeforeRun": true,
+        "restoreTerminals.runOnStartup": true,
+        "restoreTerminals.terminals": [
+            {
+                "splitTerminals": [{
+                    "name": "localhost:3000",
+                    "commands": [
+                        "npm start"
+                    ]
+                }]
+            },
+            {
+                "splitTerminals": [{
+                    "name": "build"
+                }]
+            }
+        ]
+    }
+}
