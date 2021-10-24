@@ -20,7 +20,6 @@ export const ShowDrawing = (props) => {
 
     // show either an image or text, based on image index value
     return(<div className="hangman-doodle">
-        {/* { index === undefined && <><br />{props.alt}</>} */}
         { index >= 10 ? <img src={`gfx/hangman_10${fileFormat}`} className="rotate hanged-man linear infinite spinner" alt="...dead!" />
                       : <img src={`gfx/hangman_${index !== undefined ? index : 1}${fileFormat}`} className="hanged-man" alt="Just hanging here..." />
         }
