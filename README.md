@@ -8,4 +8,4 @@ Welp, this is a React implementation of ye olde "hangman" word guessing game.
 
 # Variants
 
-* [Hangman K](https://github.com/msukanen/hangman_k)
+* [Hangman K](https://github.com/msukanen/hangman_k) - Kotlinized, for Android
